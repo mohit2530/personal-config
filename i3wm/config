@@ -225,9 +225,11 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 # change the desktop wallpaper
 exec_always feh --bg-fill /home/mohit/Pictures/wallpaper.jpg
 
-#dual_screen
+#dual_screen - for side by side monitors
 exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 947x1200 --rotate normal --output DP-1 --off --output HDMI-1 --mode 1920x1200 --pos 0x0 --rotate normal --output DP-2 --mode 1920x1080 --pos 1920x120 --rotate normal --output HDMI-2 --off
 
+#dual_screen - for side and right orientation
+exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1200 --rotate normal --output DP-1 --off --output HDMI-1 --mode 1920x1200 --pos 0x0 --rotate normal --output DP-2 --mode 1920x1080 --pos 1920x175 --rotate right --output HDMI-2 --off
 
 
 # Window Colors
@@ -263,9 +265,3 @@ hide_edge_borders both
 
 ## Visual Transition From Windows
 exec compton -f 
-
-
-
-
-
-
